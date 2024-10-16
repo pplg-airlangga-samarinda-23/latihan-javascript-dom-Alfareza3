@@ -7,8 +7,8 @@
 
 <body>
     <form id="form1" onsubmit="showAlertName()">
-        Nama depan: <input type="text" name="depan" value="Messi"><br>
-        Nama belakang: <input type="text" name="belakang" value="Ronaldo"><br>
+        Nama depan: <input type="text" name="depan" value=""><br>
+        Nama belakang: <input type="text" name="belakang" value=""><br>
         <input type="submit" value="Submit">
     </form>
 
@@ -17,6 +17,14 @@
             // lengkapi fungsi ini untuk dapat menampilkan alert yang berisikan
             // nama depan dan nama belakang sesuai dengan yang diinputkan
             // pada input
+
+            event.preventDefault();
+
+            const form = document.getElementById("form1");
+            const namaDepan = form.elements["depan"].value;
+            const namaBelakang = form.elements["belakang"].value;
+
+            alert(`Nama lengkap: ${namaDepan} ${namaBelakang}`);
         }
     </script>
 </body>

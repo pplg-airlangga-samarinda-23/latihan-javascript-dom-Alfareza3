@@ -10,6 +10,12 @@
 
     <script>
         // tambahkan fungsi yang mengubah warna paragraf menjadi biru ketika tombol ditekan
+        const paragraf = document.getElementById("paragraf");
+        const tombol = document.getElementById("tombol")
+        
+        tombol.addEventListener("click", function(){
+        paragraf.style.color="blue";
+        });
     </script>
 </body>
 </html>
